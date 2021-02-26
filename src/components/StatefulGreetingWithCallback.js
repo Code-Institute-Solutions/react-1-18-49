@@ -12,8 +12,13 @@ class StatefulGreetingWithCallback extends React.Component {
   handleClick() {
     this.setState({
       introduction: "Goodbye!",
+      buttonText: 'Enter'
+    }, ()=>{
+        console.log('new state', this.state.introduction);
+        console.log('new state', this.state.buttonText);
     });
     console.log(this.state.introduction);
+    console.log(this.state.buttonText);
   }
 
   render() {
