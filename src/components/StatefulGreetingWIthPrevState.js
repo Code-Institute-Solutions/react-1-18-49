@@ -47,7 +47,7 @@ class StatefulGreetingWithPrevState extends React.Component {
         <button onClick={() => this.handleClick()}>
           {this.state.buttonText}
         </button>
-        <button onClick={() => this.increment}>
+        <button onClick={() => this.increment()}>
           Increment
         </button>
         <p>You've clicked {this.state.count} times</p>
