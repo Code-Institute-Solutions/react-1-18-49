@@ -4,7 +4,7 @@ export class EventsClass extends Component {
     render() {
         return (
             <div>
-                <button>click me - functional component</button>
+                <button>click me - class component</button>
             </div>
         )
     }
