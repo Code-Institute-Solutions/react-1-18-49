@@ -1,13 +1,29 @@
 import React, { Component } from 'react'
 
 export class EventsClass extends Component {
+    clickHandler(){
+        console.log("Clicked the class button")
+    }
     render() {
         return (
             <div>
-                <button>click me - class component</button>
+                <button onClick={this.clickHandler}>click me - class component</button>
             </div>
         )
     }
 }
 
 export default EventsClass
+
+
+
+fetch(url, options)
+.then(response => {
+    return response.json()
+})
+.then(data => {
+  console.log('Success:', data);
+})
+.catch((error) => {
+  console.error('Error:', error);
+});
