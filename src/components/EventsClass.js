@@ -7,7 +7,9 @@ class EventsClass extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.clickHandler}>Click me - class component</button>
+                <button onClick={this.clickHandler}>
+                    Click me - class component
+                </button>
             </div>
         )
     }

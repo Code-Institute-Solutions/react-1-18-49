@@ -20,8 +20,12 @@ class StatefulGreeting extends React.Component {
     render() {
         return (
             <div>
-                <h1>{this.state.introduction} {this.props.greeting}</h1>
-                <button onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                <h1>
+                    {this.state.introduction} {this.props.greeting}
+                </h1>
+                <button onClick={() => this.handleClick()}>
+                    {this.state.buttonText}
+                </button>
             </div>
         )
     }
