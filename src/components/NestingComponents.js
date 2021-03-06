@@ -1,16 +1,13 @@
 import React, { Component } from 'react'
 
 class NestingComponents extends Component {
-
     constructor(props) {
         super(props)
-    
         this.state = {
             isLoaded: true,
             isLoggedIn: true,
         }
     }
-    
     render() {
         return (
             <div>
