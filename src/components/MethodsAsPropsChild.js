@@ -1,6 +1,6 @@
 import React from 'react'
 
-function UserMessage(props) {
+function MethodsAsPropsChild(props) {
     return (
         <div>
             {
@@ -21,4 +21,4 @@ function UserMessage(props) {
     )
 }
 
-export default UserMessage
+export default MethodsAsPropsChild
