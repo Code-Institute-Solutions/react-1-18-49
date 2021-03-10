@@ -1,4 +1,11 @@
-.App {
+* {
+    /* border: 1px black solid; */
+    text-align: center
+}
+img {
+    max-width: 100%;
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +42,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
