@@ -20,14 +20,14 @@ export class UserInfo extends Component {
                 {
                    this.state.isLoggedIn ? (
                         <div>
-                            <p>welcome!</p>
+                            <span>welcome!</span>
                             <button className="btn-danger" onClick={this.handleSignOut}>
                                 sign out
                             </button>
                         </div>
                     ) : (
                         <div>
-                            <p>please sign in</p>
+                            <span>please sign in</span>
                             <button className="btn-success" onClick={this.handleSignIn}>
                                 sign in
                             </button>

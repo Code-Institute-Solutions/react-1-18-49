@@ -14,9 +14,24 @@ function App() {
       </div>
       <BookStore callToAction="Browse our books below" />
         <div className="row">
-            <Book title="to kill a mockingbird" author="harper lee" pages="281" image={process.env.PUBLIC_URL + "/logo192.png"} />
-            <Book title="the great gatsby" author="f. scott fitzgerald" pages="218" image={process.env.PUBLIC_URL + "/logo192.png"} />
-            <Book title="the catcher in the rye" author="j. d. salinger" pages="234" image={process.env.PUBLIC_URL + "/logo192.png"} />
+            <Book
+                title="to kill a mockingbird"
+                author="harper lee"
+                pages="281"
+                image={process.env.PUBLIC_URL + "/img1.jpg"}
+            />
+            <Book
+                title="the great gatsby"
+                author="f. scott fitzgerald"
+                pages="218"
+                image={process.env.PUBLIC_URL + "/img2.jfif"}
+            />
+            <Book
+                title="the catcher in the rye"
+                author="j. d. salinger"
+                pages="234"
+                image={process.env.PUBLIC_URL + "/img3.png"}
+            />
         </div>
       <FooterMessage />
       </div>
