@@ -18,7 +18,7 @@ export class LifeCyclesCWU extends Component {
         return (
             <div>
                 {this.state.visible && <LifeCyclesCWUTracker />}
-                <button>Toggle Display</button>
+                <button onClick={this.toggleDisplay}>Toggle Display</button>
             </div>
         )
     }
