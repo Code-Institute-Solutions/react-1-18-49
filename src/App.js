@@ -1,8 +1,10 @@
 import "./App.css";
-import UncontrolledForm from "./components/UncontrolledForm";
+import HooksCounter from "./components/HooksCounter";
 
 function App() {
-  return <div className="App"></div>;
+  return <div className="App">
+      <HooksCounter />
+    </div>;
 }
 
 export default App;
