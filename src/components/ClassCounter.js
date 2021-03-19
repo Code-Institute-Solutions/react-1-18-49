@@ -7,7 +7,7 @@ export class ClassCounter extends Component {
       count: 0,
     }
   }
-  increment = () => {
+  handleClick = () => {
     this.setState(prevState => ({
         count: prevState.count + 1
     }))
@@ -15,8 +15,8 @@ export class ClassCounter extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.increment }>
-          Increment Count ({this.state.count})
+        <button onClick={this.handleClick }>
+          Increment Class Counter {this.state.count}
         </button>
       </div>
     )
