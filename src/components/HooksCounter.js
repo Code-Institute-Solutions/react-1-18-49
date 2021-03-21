@@ -5,9 +5,14 @@ export default function HooksCounter(props) {
 
   return (
     <div className="greeting">
-        <h1>Hello {props.name}! I'm a functional component with hooks!</h1>
+        <h1>
+            Hello {props.name}!
+            I'm a functional component with hooks!
+        </h1>
         <h2>You clicked {count} times</h2>
-        <button onClick={() => setCount(count => count + 1)}>
+        <button onClick={
+            () => setCount(count => count + 1)
+        }>
             Increment Counter
         </button>
     </div>
