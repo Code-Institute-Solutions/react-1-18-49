@@ -3,7 +3,7 @@ import UseStateWithArrays from "./components/UseStateWithArrays";
 
 function App() {
   return <div className="App">
-      <UseStateWithArrays />
+     <UseStateWithArrays /> 
   </div>;
 }
 
