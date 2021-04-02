@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { gopherCards } from '../gophers'
 import Loader from './Loader'
 
-export class SearchBar extends Component {
+export class SearchBar5 extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -41,38 +41,36 @@ export class SearchBar extends Component {
                 <h4>so far searched {this.state.searches} times</h4>
                 <h4>gophers found: {this.state.gophers.length}</h4>
                 <form>
-                    <input onChange={(e) => this.handleChange(e)} type="text" />
+                    <input
+                        onChange={(e) => this.handleChange(e)}
+                        type="text"
+                    />
                 </form>
                 {
                     this.state.isLoading
                     ? <Loader />
-                    : (<table style={{margin: 'auto'}}>
-                            <thead>
-                                <tr><th>name</th><th>email</th><th>website</th><th>image</th></tr>
-                            </thead>
+                    : <table style={{margin: 'auto'}}>
+                        <thead>
+                            <tr><th>name</th><th>email</th><th>website</th><th>image</th></tr>
+                        </thead>
+                        <tbody>
                             {
-                                <tbody>
-                                    {
-                                        this.state.gophers.map(item => {
-                                            const {name, email, website, image} = item;
-                                            return (
-                                                <tr key={image}>
-                                                    <td>{name}</td>
-                                                    <td>{email}</td>
-                                                    <td>{website}</td>
-                                                    <td><img alt={name} src={image} /></td>
-                                                </tr>
-                                            )
-                                        })
-                                    }
-                                </tbody>
+                                this.state.gophers.map(item => {
+                                    const {name, email, website, image} = item;
+                                    return (
+                                        <tr key={image}>
+                                            <td>{name}</td>
+                                            <td>{email}</td>
+                                            <td>{website}</td>
+                                            <td><img alt={name} src={image} /></td>
+                                        </tr>
+                                    )
+                                })
                             }
-                        </table>
-                    )
+                        </tbody>
+                    </table>
                 }
             </div>
         )
     }
 }
-
-export default SearchBar
