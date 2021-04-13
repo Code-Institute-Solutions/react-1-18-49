@@ -8,18 +8,16 @@ export class SearchBar1 extends Component {
     render() {
         return (
             <div>
-                <h1>Post Search part1</h1>
+                <h1>Name Search part1</h1>
                 <form>
                     <input
                         type="text"
+                        placeholder="search names..."
                     />
                 </form>
-                <table style={{margin: 'auto'}}>
-                    <thead>
-                        <tr><th>title</th><th>description</th><th>name</th><th>image</th></tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <div style={{margin: 'auto'}}>
+                    we will render names here
+                </div>
             </div>
         )
     }
