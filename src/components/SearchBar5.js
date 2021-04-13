@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { gopherCards } from '../gophers'
+import gopherCards from '../gophers'
 import Loader from './Loader'
 
 export class SearchBar5 extends Component {

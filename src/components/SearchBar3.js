@@ -1,26 +1,27 @@
 import React, { Component } from 'react'
-import { gopherCards } from '../gophers'
+import {posts} from '../loremPicsum.json'
 
 export class SearchBar3 extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            gophers: gopherCards
+            posts: posts
         }
     }
     handleChange = (event) => {
         const name = event.target.value
-        const filteredGophers = gopherCards.filter(card => {
-            return card.name.toLowerCase().includes(name)
+        const filteredPosts = posts.filter(post => {
+            return post.name.toLowerCase().includes(name)
         })
+        console.log(filteredPosts)
         this.setState({
-            gophers: filteredGophers
+            posts: filteredPosts
         })
     }
     render() {
         return (
             <div>
-                <h1>Gopher Search 3</h1>
+                <h1>Post Search 3</h1>
                 <form>
                     <input
                         onChange={(e) => this.handleChange(e)}
@@ -29,17 +30,17 @@ export class SearchBar3 extends Component {
                 </form>
                 <table style={{margin: 'auto'}}>
                     <thead>
-                        <tr><th>name</th><th>email</th><th>website</th><th>image</th></tr>
+                        <tr><th>title</th><th>description</th><th>name</th><th>image</th></tr>
                     </thead>
                     <tbody>
                         {
-                            this.state.gophers.map(item => {
-                                const {name, email, website, image} = item;
+                            this.state.posts.map(post => {
+                                const {title, description, name, image} = post;
                                 return (
-                                    <tr key={image}>
+                                    <tr key={title}>
+                                        <td>{title}</td>
+                                        <td>{description}</td>
                                         <td>{name}</td>
-                                        <td>{email}</td>
-                                        <td>{website}</td>
                                         <td><img alt={name} src={image} /></td>
                                     </tr>
                                 )

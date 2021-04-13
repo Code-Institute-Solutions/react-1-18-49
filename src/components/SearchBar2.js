@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { gopherCards } from '../gophers'
+import {posts} from '../loremPicsum'
 
 export class SearchBar2 extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ export class SearchBar2 extends Component {
     render() {
         return (
             <div>
-                <h1>Gopher Search part2</h1>
+                <h1>Post Search part2</h1>
                 <form>
                     <input
                         type="text"
@@ -17,17 +17,17 @@ export class SearchBar2 extends Component {
                 </form>
                 <table style={{margin: 'auto'}}>
                     <thead>
-                        <tr><th>name</th><th>email</th><th>website</th><th>image</th></tr>
+                        <tr><th>title</th><th>description</th><th>name</th><th>image</th></tr>
                     </thead>
                     <tbody>
                         {
-                            gopherCards.map(item => {
-                                const {name, email, website, image} = item;
+                            posts.map(post => {
+                                const {title, description, name, image} = post;
                                 return (
                                     <tr key={image}>
+                                        <td>{title}</td>
+                                        <td>{description}</td>
                                         <td>{name}</td>
-                                        <td>{email}</td>
-                                        <td>{website}</td>
                                         <td><img alt={name} src={image} /></td>
                                     </tr>
                                 )

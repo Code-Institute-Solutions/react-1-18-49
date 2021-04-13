@@ -8,7 +8,7 @@ export class SearchBar1 extends Component {
     render() {
         return (
             <div>
-                <h1>Gopher Search part1</h1>
+                <h1>Post Search part1</h1>
                 <form>
                     <input
                         type="text"
@@ -16,7 +16,7 @@ export class SearchBar1 extends Component {
                 </form>
                 <table style={{margin: 'auto'}}>
                     <thead>
-                        <tr><th>name</th><th>email</th><th>website</th><th>image</th></tr>
+                        <tr><th>title</th><th>description</th><th>name</th><th>image</th></tr>
                     </thead>
                     <tbody></tbody>
                 </table>
