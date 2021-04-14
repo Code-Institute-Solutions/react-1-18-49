@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { names } from '../names'
+import names from '../names'
 
 export class SearchBar2 extends Component {
     constructor(props) {
@@ -19,9 +19,7 @@ export class SearchBar2 extends Component {
                 <div style={{margin: 'auto'}}>
                     {
                         names.map(name => {
-                            return (
-                                <p>{name}</p>
-                            )
+                            return <p key={name}>{name}</p>
                         })
                     }
                 </div>

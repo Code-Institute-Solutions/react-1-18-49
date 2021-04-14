@@ -1,4 +1,4 @@
-export const names = [
+export default [
     "Sonny Anderson",
     "Gudrun Mayert",
     "Viviane Crist",

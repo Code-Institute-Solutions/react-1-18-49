@@ -8,8 +8,8 @@ import { SearchBar5 } from "./components/SearchBar5";
 
 function App() {
   return <div className="App">
-      {/* <SearchBar1 />
-      <SearchBar2 /> */}
+      {/* <SearchBar1 /> */}
+      {/* <SearchBar2 /> */}
       <SearchBar3 />
   </div>;
 }

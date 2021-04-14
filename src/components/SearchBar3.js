@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import { names } from '../names'
+import names from '../names'
 
 export class SearchBar3 extends Component {
     constructor(props) {
         super(props)
-        this.state = {
-            names: names
-        }
+        this.state = { names: names }
     }
     handleChange = (event) => {
         const inputText = event.target.value
@@ -21,6 +19,7 @@ export class SearchBar3 extends Component {
         return (
             <div>
                 <h1>Name Search part3</h1>
+                <p>matching names found: {this.state.names.length}</p>
                 <form>
                     <input
                         type="text"
@@ -30,11 +29,7 @@ export class SearchBar3 extends Component {
                 </form>
                 <div style={{margin: 'auto'}}>
                     {
-                        this.state.names.map(name => {
-                            return (
-                                <p>{name}</p>
-                            )
-                        })
+                        this.state.names.map(name => <p>{name}</p>)
                     }
                 </div>
             </div>
