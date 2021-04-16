@@ -1,4 +1,4 @@
-export default names = [
+const names = [
     "Sonny Anderson",
     "Gudrun Mayert",
     "Viviane Crist",
@@ -100,3 +100,4 @@ export default names = [
     "Earnest Jenkins",
     "Reymundo Gleason"
 ]
+export default names
