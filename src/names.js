@@ -1,4 +1,4 @@
-export default [
+export default names = [
     "Sonny Anderson",
     "Gudrun Mayert",
     "Viviane Crist",

@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
-import names from '../names'
+import importedNames from '../names'
 
 export class SearchBar3 extends Component {
     constructor(props) {
         super(props)
-        this.state = { names: names }
+        this.state = {
+            names: importedNames
+        }
     }
     handleChange = (event) => {
-        const inputText = event.target.value
-        const filteredNames = names.filter(name => {
+        const inputText = event.target.value.toLowerCase()
+        const filteredNames = importedNames.filter(name => {
             return name.toLowerCase().includes(inputText)
         })
         this.setState({
