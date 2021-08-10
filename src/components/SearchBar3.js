@@ -4,12 +4,14 @@ import importedNames from '../names'
 export class SearchBar3 extends Component {
     constructor(props) {
         super(props)
+    
         this.state = {
-            names: importedNames
+             names: importedNames
         }
     }
     handleChange = (event) => {
         const inputText = event.target.value.toLowerCase()
+        console.log(inputText)
         const filteredNames = importedNames.filter(name => {
             return name.toLowerCase().includes(inputText)
         })
@@ -20,19 +22,19 @@ export class SearchBar3 extends Component {
     render() {
         return (
             <div>
-                <h1>Name Search part3</h1>
+                <h1>Name Search</h1>
                 <p>matching names found: {this.state.names.length}</p>
                 <form>
                     <input
+                        onChange={(event) => this.handleChange(event)}
                         type="text"
                         placeholder="search names..."
-                        onChange={(e) => this.handleChange(e)}
                     />
                 </form>
                 <div style={{margin: 'auto'}}>
-                    {
-                        this.state.names.map(name => <p>{name}</p>)
-                    }
+                    {this.state.names.map(name => {
+                        return <p key={name}>{name}</p>
+                    })}
                 </div>
             </div>
         )
