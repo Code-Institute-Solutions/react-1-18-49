@@ -3,10 +3,12 @@ import ConditionalRenderingClass from "./components/ConditionalRenderingClass";
 import ConditionalRenderingFunctional from "./components/ConditionalRenderingFunctional";
 
 function App() {
-  return (<div className="App">
+  return (
+    <div className="App">
       <ConditionalRenderingClass />
-      <ConditionalRenderingFunctional />
-  </div>);
+      <ConditionalRenderingFunctional connected={true} />
+    </div>
+  );
 }
 
 export default App;

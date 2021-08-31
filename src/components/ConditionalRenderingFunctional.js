@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function ConditionalRenderingFunctional() {
-    return (
-        <div>
-            
-        </div>
-    )
+function ConditionalRenderingFunctional(props) {
+  return (
+    <div>
+      <h1>{props.connected ? "Connected" : "Not Connected"}</h1>
+    </div>
+  );
 }
 
-export default ConditionalRenderingFunctional
+export default ConditionalRenderingFunctional;
